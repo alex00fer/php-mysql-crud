@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+              integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+              crossorigin="anonymous" />
+
+       <link rel="stylesheet" href="css/style.css">
+
+       <title>CRUD Jugadores</title>
+</head>
+
+<body>
+
+       <div class="container-fluid">
+              <div class="row d-flex align-items-stretch mt-3">
+
+                     <div class="mt-2 col-12 col-md-8">
+                            <div class="text-center">
+                                   <h2 class="text-center d-inline">Jugadores</h2>
+                                   <button onclick="doAjaxGet(printJugadores);" class="btn btn-dark m-2">
+                                          <i class="fas fa-sync-alt"></i>
+                                   </button>
+                            </div>
+                            <table style="width:100%" class="table table-hover">
+                                   <thead class="thead-dark">
+                                          <tr>
+                                                 <th>ID</th>
+                                                 <th>NOMBRE</th>
+                                                 <th>DESCRIPCION</th>
+                                                 <th>CARACTERISTICA</th>
+                                                 <th>EDAD</th>
+                                          </tr>
+                                   </thead>
+                                   <tbody>
+
+                                   </tbody>
+                            </table>
+                            <div class="alert alert-secondary" role="alert">
+                                   Tip: Click rows to move them to the actions panel!
+                            </div>
+
+                     </div>
+
+
+                     <div class="mt-2 col-12 col-md-4">
+                            <h2 class="text-center">Actions</h2>
+                            <form class="border border-dark p-2 rounded"
+                                   onsubmit="event.preventDefault(); submitAction()">
+                                   <div class="form-group text-center">
+                                          <label class="radio-inline p-2">
+                                                 <input type="radio" name="actionradio" value="R" checked>SEARCH
+                                          </label>
+                                          <label class="radio-inline p-2">
+                                                 <input type="radio" name="actionradio" value="U">UPDATE
+                                          </label>
+                                          <label class="radio-inline p-2">
+                                                 <input type="radio" name="actionradio" value="C">INSERT
+                                          </label>
+                                          <label class="radio-inline p-2">
+                                                 <input type="radio" name="actionradio" value="D">DELETE
+                                          </label>
+                                   </div>
+
+                                   <div class="form-group">
+                                          <label for="idInput">Id</label>
+                                          <input type="number" class="form-control" id="idInput">
+                                   </div>
+                                   <div class="form-group">
+                                          <label for="nombreInput">Nombre</label>
+                                          <input type="text" class="form-control" id="nombreInput">
+                                   </div>
+                                   <div class="form-group">
+                                          <label for="descripcionInput">Descripcion</label>
+                                          <input type="text" class="form-control" id="descripcionInput">
+                                   </div>
+                                   <div class="form-group">
+                                          <label for="caracteristicaInput">Caracteristica</label>
+                                          <input type="text" class="form-control" id="caracteristicaInput">
+                                   </div>
+                                   <div class="form-group">
+                                          <label for="edadInput">Edad</label>
+                                          <input type="number" class="form-control" id="edadInput">
+                                   </div>
+                                   <button type="submit" class="btn btn-dark w-100">Execute</button>
+                            </form>
+                            <div id="alert" class="alert alert-danger" role="alert" style="display: none;"></div>
+                     </div>
+
+
+              </div>
+       </div>
+
+
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+              integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+              </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+              integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+              crossorigin="anonymous">
+              </script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+              integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+              crossorigin="anonymous">
+              </script>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+              integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+              crossorigin="anonymous" />
+
+       <script src="js/script.js"></script>
+
+</body>
+
+</html>

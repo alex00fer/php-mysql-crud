@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
+
+body {
+       font-family: 'PT Serif', serif;
+}
+
+input[type=radio] {
+  border: 0px;
+  width: 100%;
+  height: 1.5em;
+}
+
+tbody > tr {
+  cursor: pointer;
+}
+
+input:required {
+  background-color: rgb(255, 255, 199);
+  border-color: black;
+}
+
+input:disabled {
+  color: rgba(255, 255, 255, 0);
+}
